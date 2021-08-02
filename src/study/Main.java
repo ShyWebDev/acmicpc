@@ -4,6 +4,9 @@ import study.step1.*;
 import study.step2.Study3_2753;
 import study.step2.Study5_2884;
 import study.step3.*;
+import study.step4.Study1_10952;
+import study.step4.Study2_10951;
+import study.step4.Study3_1110;
 
 public class Main {
 
@@ -17,25 +20,22 @@ public class Main {
             java.io.BufferedWriter bw = new java.io.BufferedWriter(new java.io.OutputStreamWriter(System.out));
 
 
-            int T = Integer.parseInt(br.readLine());
+            int N = Integer.parseInt(br.readLine());
 
             java.util.StringTokenizer st;
 
-            for (int i = 1; i <= T; i++) {
-                st = new java.util.StringTokenizer(br.readLine()," ");
-                Integer A = Integer.parseInt(st.nextToken());
-                Integer B = Integer.parseInt(st.nextToken());
-                bw.write("Case #"+i +": " + A + " + " + B + " = " + (A+B) + "\n");
+            st = new java.util.StringTokenizer(br.readLine()," ");
+            int[] arr = new int[N];
+            for (int i = 0; i < N; i++) {
+                arr[i] = Integer.parseInt(st.nextToken());
             }
 
-            br.close();
-
-            bw.flush();
-            bw.close();
+            java.util.Arrays.sort(arr);
+            System.out.print(arr[0] + " " + arr[N - 1]);
         }
     }
     */
     public static void main(String[] args) throws java.io.IOException{
-        Study8_11022 test = new Study8_11022();
+        Study3_1110 test = new Study3_1110();
     }
 }
